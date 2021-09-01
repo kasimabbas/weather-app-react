@@ -8,6 +8,11 @@ const Temp = () => {
 
   const getWeatherInfo = async () => {
     try {
+      
+      if(searchValue ==='')
+      {
+        alert('Please enter city name');
+      }
       let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid=b190a0605344cc4f3af08d0dd473dd25`;
 
       let res = await fetch(url);
